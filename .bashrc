@@ -160,10 +160,16 @@ fi
 # See: http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html
 shopt -s histappend
 
+# Know the current branch
+# http://betterexplained.com/articles/aha-moments-when-learning-git/
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
 # Make prompt informative
 # See:  http://www.ukuug.org/events/linux2003/papers/bash_tips/
 #PS1="\[\033[0;34m\][\u@\h:\w]$\[\033[0m\]"
-PS1='\[\e[1;35m\]\u\[\e[0m\]\[\e[1;33m\]@\[\e[0m\]\[\e[1;35m\]\h\[\e[0m\]\[\e[1;33m\]:\[\e[0m\]\[\e[1;31m\]\w\[\e[0m\]\n\[\e[1;31m\]\$\[\e[0m\] '
+PS1="\[\033[01;38m\]\u@\h\[\033[01;35m\] \W \[\033[31m\]\$(parse_git_branch) \[\033[01;35m\]$\[\033[00m\] "
 
 ## -----------------------
 ## -- 2) Set up aliases --
