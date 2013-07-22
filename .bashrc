@@ -182,7 +182,7 @@ alias cp="cp -i"
 set -o noclobber
 
 # 2.2) Listing, directories, and motion
-alias ll="ls -alrtF --color"
+alias ll="ls -altF --color"
 alias ls="ls --color"
 alias la="ls -A"
 alias l="ls -CF"
