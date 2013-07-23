@@ -62,6 +62,8 @@
 (global-set-key "\M-i" 'back-window)
 (global-set-key "\C-z" 'zap-to-char)
 ;; (global-set-key "\C-h" 'backward-delete-char)
+(global-set-key "\C-d" 'backward-delete-char)
+;;(define-key c-mode-map "\C-d" 'backward-delete-char)
 (global-set-key "\M-d" 'delete-word)
 (global-set-key "\M-h" 'backward-delete-word)
 (global-set-key "\M-u" 'zap-to-char)
