@@ -230,6 +230,10 @@ fi
 ## ------------------------------
 ## -- 3) User-customized code  --
 ## ------------------------------
+# AGFV trying to enable backspace on emacs
+
+bind '"\C-?": ackward-delete-char'
+bind '"\M-[3~": delete-char'
 
 ## Define any user-specific variables you want here.
 source ~/.bashrc_custom
