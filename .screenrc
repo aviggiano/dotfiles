@@ -23,8 +23,9 @@ crlf                  off             # default: off
 hardcopy_append       on              # default: off
 startup_message       off             # default: on
 vbell                 off             # default: ???
-escape	"^Tt"                         # ctrl-A default interferes with emacs keybindings for terminal
-defutf8 on                            # unicode by default
+escape	"^Et"                         # ctrl-A default interferes with emacs keybindings for terminal
+				      # by aviggiano: ctrl-T interferes with chromebook's open tab
+Defutf8 on                            # unicode by default
 defscrollback         10000           # default: 100
 silencewait           15              # default: 30
 activity              "activity in %n (%t) [%w:%s]~"

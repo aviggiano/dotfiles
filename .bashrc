@@ -234,6 +234,7 @@ fi
 
 bind '"\C-?": ackward-delete-char'
 bind '"\M-[3~": delete-char'
+#bind '"\C-_": backward-delete-word'
 
 ## Define any user-specific variables you want here.
 source ~/.bashrc_custom
