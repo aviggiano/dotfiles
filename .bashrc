@@ -195,8 +195,8 @@ alias md='mkdir'
 alias cl='clear'
 alias du='du -ch --max-depth=1'
 alias treeacl='tree -A -C -L 2'
-alias ff='pdflatex -output-directory=aux index >> /dev/null;mv aux/index.pdf .'
-alias ffv='pdflatex -output-directory=aux index;mv aux/index.pdf .'
+alias ff='pdflatex -output-directory=aux index >> /dev/null;mv -f aux/index.pdf .'
+alias ffv='pdflatex -output-directory=aux index;mv -f aux/index.pdf .'
 
 # 2.3) Text and editor commands
 alias emacs='emacs -nw'     # No X11 windows
