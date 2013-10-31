@@ -236,7 +236,11 @@ fi
 
 bind '"\C-?": ackward-delete-char'
 bind '"\M-[3~": delete-char'
-#bind '"\C-_": backward-delete-word'
+
+# Ctrl-H backspace delete word
+bind '\M-h:backward-kill-word'
+
+export PATH=/home/cb/sbt/bin:$PATH
 
 ## Define any user-specific variables you want here.
 source ~/.bashrc_custom
