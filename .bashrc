@@ -169,14 +169,14 @@ parse_git_branch() {
 # Make prompt informative
 # See:  http://www.ukuug.org/events/linux2003/papers/bash_tips/
 #PS1="\[\033[0;34m\][\u@\h:\w]$\[\033[0m\]"
-PS1="\[\033[01;38m\]\u@\h\[\033[01;35m\] \W \[\033[31m\]\$(parse_git_branch) \[\033[01;35m\]$\[\033[00m\] "
+PS1="\[\033[01;38m\]\u@\h\[\033[01;35m\] \W \[\033[31m\]\$(parse_git_branch) \[\033[01;31m\]$\[\033[00m\] "
 
 ## -----------------------
 ## -- 2) Set up aliases --
 ## -----------------------
 
 # 2.1) Safety
-alias rm="rm -i"
+# alias rm="rm -i"
 alias mv="mv -i"
 alias cp="cp -i"
 set -o noclobber
@@ -220,14 +220,14 @@ command -v rlwrap >/dev/null 2>&1 || { echo >&2 "Install rlwrap to use node: sud
 
 # 2.7) node.js and nvm
 # http://nodejs.org/api/repl.html#repl_repl
-alias node="env NODE_NO_READLINE=1 rlwrap node"
-alias node_repl="node -e \"require('repl').start({ignoreUndefined: true})\""
-export NODE_DISABLE_COLORS=1
-if [ -s ~/.nvm/nvm.sh ]; then
-    NVM_DIR=~/.nvm
-    source ~/.nvm/nvm.sh
-    nvm use v0.10.12 &> /dev/null # silence nvm use; needed for rsync
-fi
+# alias node="env NODE_NO_READLINE=1 rlwrap node"
+# alias node_repl="node -e \"require('repl').start({ignoreUndefined: true})\""
+# export NODE_DISABLE_COLORS=1
+# if [ -s ~/.nvm/nvm.sh ]; then
+#    NVM_DIR=~/.nvm
+#    source ~/.nvm/nvm.sh
+#    nvm use v0.10.12 &> /dev/null # silence nvm use; needed for rsync
+# fi
 
 ## ------------------------------
 ## -- 3) User-customized code  --
@@ -237,10 +237,10 @@ fi
 bind '"\C-?": ackward-delete-char'
 bind '"\M-[3~": delete-char'
 
-# Ctrl-H backspace delete word
+# Alt-H backspace delete word
 bind '\M-h:backward-kill-word'
 
-export PATH=/home/cb/sbt/bin:$PATH
+# export PATH=/home/cb/sbt/bin:$PATH
 
 ## Define any user-specific variables you want here.
 source ~/.bashrc_custom
